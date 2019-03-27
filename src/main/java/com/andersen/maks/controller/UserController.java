@@ -1,8 +1,8 @@
 package com.andersen.maks.controller;
 
-
 import com.andersen.maks.entity.User;
 import com.andersen.maks.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,11 +12,21 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 public class UserController {
 
+    private static final Logger logger = Logger.getLogger(UserController.class);
+
     @Autowired
     public UserService userService;
 
     @GetMapping("/")
     public String index(){
+
+        //logs debug message
+        if(logger.isDebugEnabled()){
+            logger.debug("getWelcome is executed!");
+        }
+
+        //logs exception
+        logger.error("This is Error message", new Exception("Testing"));
         return "index";
     }
 
@@ -37,6 +47,7 @@ public class UserController {
         return "showUsers";
 
     }
+
 
     @GetMapping("/addUser")
     public String creteUserPage(){

@@ -1,6 +1,11 @@
 package com.andersen.maks.entity;
 
+
+
+
 public class User {
+
+
     private int id;
     private String name;
     private String email;
@@ -15,6 +20,7 @@ public class User {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
+
     public int getId() {
         return id;
     }
@@ -57,4 +63,5 @@ public class User {
                 ", phoneNumber=" + phoneNumber +
                 '}';
     }
+
 }

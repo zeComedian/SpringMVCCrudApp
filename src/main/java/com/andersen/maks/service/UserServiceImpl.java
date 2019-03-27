@@ -1,5 +1,7 @@
 package com.andersen.maks.service;
 
+import com.andersen.maks.config.WebAppInitializer;
+import com.andersen.maks.controller.UserController;
 import com.andersen.maks.dao.UserDao;
 import com.andersen.maks.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;

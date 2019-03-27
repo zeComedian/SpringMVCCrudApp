@@ -1,5 +1,7 @@
 package com.andersen.maks.config;
 
+import com.andersen.maks.controller.UserController;
+import org.apache.log4j.Logger;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -21,5 +23,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
         // мапим все с самого начала
         dispatcher.addMapping("/");
 
+
     }
+
 }
