@@ -50,7 +50,7 @@ public class UserController {
 
 
     @GetMapping("/addUser")
-    public String creteUserPage(){
+    public String createUserPage(){
         return "/createUser";
     }
 
